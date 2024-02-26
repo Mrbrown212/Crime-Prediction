@@ -1,0 +1,5 @@
+Avon and Somerset - 0
+Bedfordshire - 1
+Cambridgeshire - 2
+Cheshire - 3
+Cleveland - 4
