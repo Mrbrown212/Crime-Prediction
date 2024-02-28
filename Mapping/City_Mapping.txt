@@ -3,3 +3,17 @@ Bedfordshire - 1
 Cambridgeshire - 2
 Cheshire - 3
 Cleveland - 4
+Cumbria - 5
+Derbyshire - 6
+Devon and Cornwall - 7
+Dorset - 8
+Durham - 9
+Dyfed-Powys - 10
+Essex - 11
+Gloucestershire - 12
+Greater Manchester - 13
+Gwent - 14
+Hampshire - 15
+Hertfordshire - 16
+Humberside - 17
+Kent - 18

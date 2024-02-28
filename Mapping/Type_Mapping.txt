@@ -1,3 +1,9 @@
 Criminal damage and arson - 0
 Drug offences - 1
-Fraud offences - 2
+Miscellaneous crimes against society - 2
+Possession of weapons - 3
+Public order offences - 4
+Robbery - 5
+Sexual offences - 6
+Theft offences - 7
+Violence against the person - 8
