@@ -5,19 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crime Rate Prediction</title>
+    <title>UK Crime Rate Prediction</title>
     <link rel="icon" href="static/images/favicon.png" type="image/png">
     
-    <link rel="stylesheet" href="static/styles.css">
+    <!-- Include the CSS styles -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+        /* Resetting default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #002244;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Title styles */
+        .title {
+            font-size: 2rem;
+        }
+
+        /* Tagline styles */
+        .tagline {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Prediction section styles */
+        .prediction {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Table styles */
+        .table2,
+        .table3,
+        .table4 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table2 td,
+        .table3 td,
+        .table4 td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* Result row styles */
+        .r2 td {
+            font-weight: bold;
+        }
+
+        /* Button styles */
+        .button2 {
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 200px;
+            height: 50px;
+            font-size: 1.2rem;
+            font-family: 'Lora', serif;
+            font-weight: bold;
+            background-color: #ef813d;
+            color: #fff;
+            border: solid 2px #ffe5be;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffe5be;
+            color: #002244;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1 class = "title">Crime Rate Prediction Result</h1>
-        <h2 class = "tagline">Lets reduce crime rate</h2>
+        <h1 class="title">UK Crime Rate Predictor</h1>
+        <h2 class="tagline">Safety First: Harnessing Data to Predict UK Crime Rates</h2>
     </header>       
     
     <section class="prediction">
@@ -36,7 +121,7 @@
                     <label>Selected Crime Type :</label>
                 </td>
                 <td class="sel">
-                    <select >
+                    <select>
                         <option value="selected">{{crime_type}}</option>
                 </td>
             </tr>
@@ -53,7 +138,7 @@
 
         <table class="table3">         
             
-            <tr class="r2""> 
+            <tr class="r2"> 
                 <td class="result">Prediction :</td>
                 <td class="result">{{crime_status}}</td>
             </tr>
@@ -71,14 +156,32 @@
             </tr>
         </table>
 
+        <table class="table4">         
+            <tr class="r2"> 
+                <td class="result">Very Low Crime Zone</td>
+                <td class="result">1</td>
+            </tr>
+            <tr class="r2"> 
+                <td class="result">Low Crime Zone</td>
+                <td class="result">2</td>
+            </tr>
+            <tr class="r2"> 
+                <td class="result">High Crime Zone</td>
+                <td class="result">3</td>
+            </tr>
+            <tr class="r2"> 
+                <td class="result">Very High Crime Zone</td>
+                <td class="result">4</td>
+            </tr>
+        </table>
+
         <div class="button2" >
             <a href="http://127.0.0.1:5000">
-                <input type="submit" class="btn id="check_again"" value="Let's Check Again" >
+                <input type="submit" class="btn id="check_again"" value="Check Another" >
             </a>            
         </div> 
         
     </section>
-
- 
 </body>
+
 </html>

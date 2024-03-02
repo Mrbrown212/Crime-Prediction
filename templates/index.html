@@ -18,52 +18,61 @@
     <header>
         <h1 class="title">Uk Crime Rate Prediction System</h1>
     </header>
-    <center><img
-            src="https://media.wired.co.uk/photos/606d9ea420fc96acca6d3ad6/master/w_1600,c_limit/wired-facialrec.jpg">
-    </center>
+   <img src="https://media.wired.co.uk/photos/606d9ea420fc96acca6d3ad6/master/w_1600,c_limit/wired-facialrec.jpg"
+     alt="Facial Recognition Image" class="center-image" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+	 
+	 
     <section class="section1">
         <form action="/predict" method="POST">
-            <table class="table1">
-                <tr>
-                    <td class="label">
-                        <label>Select City Name</label>
-                    </td>
-                    <td class="sel">
-                        <select name="city">
-                            <option value="1">Avon and Somerset</option>
-                            <option value="0">Bedfordshire</option>
-                            <option value="2">Cambridgeshire</option>
-                            <option value="3">Cheshire</option>
-                            <option value="4">Cleveland</option>
-                        </select>
-                    </td>
-                </tr>
+            <div class="form-group">
+                <label for="city">Police Force</label>
+                <select name="city" id="city">
+                    <option value="">Select Police Force</option>
+                    <option value="0">Avon and Somerset</option>
+                    <option value="1">Bedfordshire</option>
+                    <option value="2">Cambridgeshire</option>
+                    <option value="3">Cheshire</option>
+                    <option value="4">Cleveland</option>
+                    <option value="5">Cumbria</option>
+                    <option value="6">Derbyshire</option>
+                    <option value="7">Devon and Cornwall</option>
+                    <option value="8">Dorset</option>
+                    <option value="9">Durham</option>
+                    <option value="10">Dyfed-Powys</option>
+                    <option value="11">Essex</option>
+                    <option value="12">Gloucestershire</option>
+                    <option value="13">Greater Manchester</option>
+                    <option value="14">Gwent</option>
+                    <option value="15">Hampshire</option>
+                    <option value="16">Hertfordshire</option>
+                    <option value="17">Humberside</option>
+                    <option value="18">Kent</option>
+                </select>
+            </div>
 
-                <tr>
-                    <td class="label">
-                        <label>Select Crime Type</label>
-                    </td>
-                    <td class="sel">
-                        <select name="crime">
-                            <option value="2">Fraud offences</option>
-                            <option value="1">Drug offences</option>
-                            <option value="0">Criminal damage and arson</option>
-                        </select>
-                    </td>
-                </tr>
+            <div class="form-group">
+                <label for="crime">Crime Type</label>
+                <select name="crime" id="crime">
+                    <option value="">Select Crime Type</option>
+                    <option value="0">Criminal Damage and Arson</option>
+                    <option value="1">Drug offences</option>
+                    <option value="2">Miscellaneous crimes against society</option>
+                    <option value="3">Possession of weapons</option>
+                    <option value="4">Public order offences</option>
+                    <option value="5">Robbery</option>
+                    <option value="6">Sexual offences</option>
+                    <option value="7">Theft offences</option>
+                    <option value="8">Violence against the person</option>
+                </select>
+            </div>
 
-                <tr>
-                    <td class="label">
-                        <label>Select Year</label>
-                    </td>
-                    <td class="sel">
-                        <select name="year" id="year-dropdown"></select>
-                    </td>
-                </tr>
-            </table>
+            <div class="form-group">
+                <label for="year">Select Year</label>
+                <select name="year" id="year-dropdown"></select>
+            </div>
 
             <div class="button">
-                <input type="submit" class="btn id=" predict_button"" value="Predict">
+                <input type="submit" class="btn" id="predict_button" value="Predict">
             </div>
         </form>
     </section>
@@ -82,11 +91,12 @@
             <br> <br>
             The Police recorded crime and outcomes open data tables publication, which is accessible on the official UK
             government website, is the basis for the manual preparation of the dataset. Statistics on crimes committed
-            in 19 cities between 2014 and 2021 are provided by this data.
-            We can forecast the crime rates for three distinct categories of crimes that are anticipated to occur in the
-            19 cities over the course of the upcoming few years with the aid of this application. It contains data on
-            ten distinct categories of criminal activity, such as criminal damage and arson, drug offences and fraud
-            offences.
+            in 19 Police Force Areas between 2014 and 2021 are provided by this data.
+            We can forecast the crime rates for 10 distinct categories of crimes that are anticipated to occur in the
+            19 Police Force Areas over the course of the upcoming few years with the aid of this application. It
+            contains data on 10 distinct categories of criminal activity, such as Criminal damage and arson, Drug
+            offences, Miscellaneous crimes against society, Possession of weapons, Public order offences, Robbery, Sexual offences, Theft
+            offences, Violence against the person.
 
             <br><br>
             The Random Forest Regression model from scikit-learn, which accepts year, city name, and crime type data as
@@ -94,7 +104,7 @@
             continuous values from a set of data is Random Forest Regression. In order for it to function, a huge number
             of "decision trees" that each predict something about the target variable are created. After that, a final
             prediction is generated by averaging each prediction. Because of this, it is more accurate than a single
-            decision tree. Using the testing dataset, the model predicts the crime rate with a 93.20% accuracy rate.
+            decision tree. Using the testing dataset, the model predicts the crime rate with a 81.20% accuracy rate.
 
             <br><br>
 

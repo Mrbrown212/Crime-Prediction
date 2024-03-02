@@ -1,12 +1,16 @@
-window.onload = function () {
-    //Reference the DropDownList.
-    var year = document.getElementById("year-dropdown");
+const yearDropdown = document.getElementById('year-dropdown');
 
-    //Loop and add the Year values to DropDownList.
-    for (var i = 2000; i <= 2050; i++) {
-        var option = document.createElement("OPTION");
-        option.innerHTML = i;
-        option.value = i;
-        year.appendChild(option);
-    }
-};
+// Create an option element for "Select Year" as the default option
+const defaultOption = document.createElement('option');
+defaultOption.value = 'Select Year';
+defaultOption.textContent = 'Select Year';
+defaultOption.selected = true; 
+yearDropdown.appendChild(defaultOption);
+
+// Dynamically generate years for the dropdown
+for (let i = 2001; i <= 2050; i++) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = i;
+    yearDropdown.appendChild(option);
+}
